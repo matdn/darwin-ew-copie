@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  cursor: none !important;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+:root {
+  --black: black;
+  --white: #ececec;
+  --yellow: #2c331a;
+  --grey: #747474;
+}
+
+/* ------Nav------ */
+.navFlex {
+  align-items: center;
+}
+
+.Nav {
+  display: flex;
+  justify-content: center;
+  padding: 3% 7% 1% 7%;
+  align-items: center;
+  font-family: roc grotesk;
+  font-weight: 500;
+  font-size: 21px;
+  width: 86%;
+  background-color: var(--white);
+  z-index: 10;
+  position: static;
+  top: 0;
+  z-index: 100;
+}
+
+.Nav img {
+  width: 6rem;
+  left: 2.5%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.navFlex {
+  width: 100%;
+}
+
+.navFlex .navStarter {
+  width: 100%;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.navScroll {
+  color: var(--grey);
+}
+
+nav .NavSeparator {
+  height: 40px;
+  width: 0.1rem;
+  background-color: var(--black);
+  opacity: 0.5;
+}
+
+nav select {
+  background: none;
+  border: none;
+  font-size: roc grotesk;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+nav button {
+  font-family: roc grotesk;
+  font-weight: 700;
+  font-size: 18px;
+  height: 45px;
+  width: 200px;
+  background-color: var(--white);
+  border: solid 2px var(--black);
+  border-radius: 30px;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+.darkMode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.selectorDarkMode {
+  width: 40px;
+  height: 25px;
+  border-radius: 100px;
+  border: 2px solid var(--black);
+  position: relative;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.DarkMode, .LightMode {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: var(--black);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.DarkMode {
+  left: 4px;
+}
+
+.LightMode {
+  right: 4px;
+}
+
+/* ------Home------ */
+.Home {
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2% 0 0 0;
+}
+.Home #d {
+  width: 50rem;
+}
+
+.HomeBackground {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition-duration: 1s;
+  border-radius: 32px;
+  background-image: url("../assets/wallBackground.png");
+}
+.HomeBackground h1 {
+  z-index: 5;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: roc grotesk, sans-serif;
+  font-size: 224px;
+  font-weight: 800;
+  color: #1400FF;
+}
+.HomeBackground .specialFont {
+  z-index: 10;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Flood Std;
+  font-size: 344px;
+  font-weight: 300;
+  color: #FCFFBC;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+}
+
+.HomeBackground h1 span {
+  overflow: hidden;
+  display: block;
+}
+
+.animationAppearing h1 span span {
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  animation: appearing 1s ease forwards;
+  animation-delay: 1s;
+  font-family: "dharma-gothic-c", sans-serif;
+}
+
+.HomeBackground h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 20px 0;
+  color: #1400FF;
+  font-family: roc grotesk;
+}
+
+.HomeBackground .scrollInstruction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.HomeBackground .mouseScroll {
+  height: 50px;
+  width: 30px;
+  border: 2px solid #1400FF;
+  border-radius: 20px;
+  position: relative;
+}
+
+.HomeBackground .mouseScroll div {
+  height: 10px;
+  width: 10px;
+  background-color: #1400FF;
+  border-radius: 20px;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: scrolling 2s infinite;
+}
+
+/* ------Menu------ */
+.Menu {
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 0 7%;
+  position: relative;
+  overflow: hidden;
+}
+.Menu .titles {
+  width: 90%;
+  height: 95%;
+  padding-top: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  z-index: 5;
+}
+.Menu .titles h2 {
+  font-family: roc grotesk;
+  font-weight: 500;
+  font-size: 96px;
+  text-align: start;
+  color: #1400FF;
+  margin: 1% 0;
+}
+.Menu .titles h2 span {
+  font-weight: 500;
+  font-size: 96px;
+  color: transparent;
+  -webkit-text-stroke: 1px #1400FF;
+}
+.Menu img {
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  width: 32rem;
+  z-index: 0;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  background-color: #1400FF;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  z-index: 200;
+}
+
+.pictures {
+  height: 100vh;
+}
+
+.DarkModeActive {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.About {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.About .image {
+  height: 100%;
+  width: 65%;
+  background-position: right;
+  background-image: url("../assets/alpes.png");
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.About .text {
+  display: flex;
+  align-items: end;
+  width: 35%;
+  padding: 0 0 14% 7%;
+  color: #1400FF;
+  font-family: roc grotesk;
+  font-size: 21px;
+}
+
+.Tech {
+  height: 100vh;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Tech pre {
+  font-size: 24px !important;
+  width: 50%;
+  transform: translateX(-15%);
+}
+
+.Dtext {
+  height: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.About3D {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition-delay: 2s;
+  background-color: var(--white);
+}
+.About3D div {
+  display: flex;
+  gap: 65px;
+}
+.About3D .btn3d {
+  font-family: roc grotesk;
+  font-size: 104px;
+  width: 100px;
+  height: 140px;
+  perspective: 800px;
+}
+.About3D .btn3d .btn__flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform-origin: center bottom 70px;
+  transition: transform;
+  transform: rotateX(0deg);
+  text-decoration: none;
+}
+.About3D .btn3d .btn__flip .btn__flip--off {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(0deg) translateZ(70px);
+  -webkit-text-stroke: 2px;
+  color: #1400FF;
+  text-decoration: none;
+  background-color: var(--white);
+  font-weight: 600;
+}
+.About3D .btn3d .btn__flip .btn__flip--on {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(90deg) translateZ(70px);
+  color: #1400FF;
+  text-decoration: none;
+  background-color: var(--white);
+  font-weight: 600;
+  font-family: roc grotesk;
+}
+
+.About3D2 {
+  padding: 7% 0;
+}
+
+.Bande {
+  height: 100vh;
+  position: relative;
+  color: #1400FF;
+  z-index: 100;
+}
+.Bande .flex {
+  display: flex;
+  white-space: nowrap;
+  border: 2px solid #1400FF;
+  position: absolute;
+  background-color: var(--white);
+}
+.Bande .bande1 {
+  top: 20%;
+  left: 350%;
+  transform: translate(-50%, -50%);
+  padding: 3% 0;
+}
+.Bande .bande2 {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  padding: 3% 0;
+}
+.Bande .bande3 {
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  padding: 3% 0;
+}
+.Bande .bande4 {
+  bottom: -40%;
+  left: -200%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  padding: 3% 0;
+}
+.Bande .bande1, .Bande .bande3 {
+  font-weight: 700;
+  font-size: 204px;
+  font-family: roc grotesk;
+}
+.Bande .bande2, .Bande .bande4 {
+  font-size: 204px;
+  font-family: "Swear Display";
+}
+
+@keyframes scrolling {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  50% {
+    top: 25px;
+    opacity: 1;
+  }
+  100% {
+    top: 35px;
+    opacity: 0.1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
